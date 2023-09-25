@@ -1,6 +1,7 @@
 import { conjugatePresentRegularEr } from './conjugate-present-regular-er.js';
 import { conjugatePresentRegularRe } from './conjugate-present-regular-re.js';
 import { conjugatePresentRegularIr } from './conjugate-present-regular-ir.js';
+import { conjugatePresentIrregularLikeOuvrir } from './conjugate-present-irregular-like-ouvrir.js';
 
 
 /**
@@ -21,6 +22,12 @@ export function conjugatePresent(verb, person) {
     const REGULAR_IR = [
         'finir',
     ];
+    const IRREGULAR_LIKE_OUVRIR = [
+        'ouvrir',
+        'découvrir',
+        'offrir',
+        'souffrir',
+    ];
 
     let conjugatedVerb = '';
 
@@ -34,6 +41,8 @@ export function conjugatePresent(verb, person) {
         case REGULAR_IR.includes(verb):
             conjugatedVerb = conjugatePresentRegularIr(verb, person);
             break;
+        case IRREGULAR_LIKE_OUVRIR.includes(verb):
+            conjugatedVerb = conjugatePresentIrregularLikeOuvrir(verb, person);
     }
 
     return conjugatedVerb;
