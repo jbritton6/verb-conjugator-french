@@ -4,7 +4,7 @@
  * @param   {String} person Which person to conjugate the verb into.
  * @returns {String}        Conjugated verb.
  */
-export function conjugatePresentRegularEr( verb, person) {
+export function conjugatePresentRegularEr(verb, person) {
     let conjugatedVerb = '';
 
     switch(person) {
