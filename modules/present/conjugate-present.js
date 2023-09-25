@@ -1,5 +1,6 @@
 import { conjugatePresentRegularEr } from './conjugate-present-regular-er.js';
 import { conjugatePresentRegularRe } from './conjugate-present-regular-re.js';
+import { conjugatePresentRegularIr } from './conjugate-present-regular-ir.js';
 
 
 /**
@@ -17,6 +18,9 @@ export function conjugatePresent(verb, person) {
     const REGULAR_RE = [
         'vendre',
     ];
+    const REGULAR_IR = [
+        'finir',
+    ];
 
     let conjugatedVerb = '';
 
@@ -26,6 +30,9 @@ export function conjugatePresent(verb, person) {
             break;
         case REGULAR_RE.includes(verb):
             conjugatedVerb = conjugatePresentRegularRe(verb, person);
+            break;
+        case REGULAR_IR.includes(verb):
+            conjugatedVerb = conjugatePresentRegularIr(verb, person);
             break;
     }
 
