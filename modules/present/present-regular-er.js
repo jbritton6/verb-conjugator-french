@@ -1,21 +1,21 @@
 /**
- * Forms the present tense conjugation of regular-re verbs in a given person.
- * @param   {String} verb   Infinitive form of the regular-re verb to conjugate.
+ * Forms the present tense conjugation of regular-er verbs in a given person.
+ * @param   {String} verb   Infinitive form of the regular-er verb to conjugate.
  * @param   {String} person Which person to conjugate the verb into.
  * @returns {String}        Conjugated verb.
  */
-export function conjugatePresentRegularRe(verb, person) {
+export function presentRegularEr(verb, person) {
     let conjugatedVerb = '';
 
     switch(person) {
         case 'singular-1st':
-            conjugatedVerb = verb.slice(0, -2) + 's';
+            conjugatedVerb = verb.slice(0, -2) + 'e';
             break;
         case 'singular-2nd':
-            conjugatedVerb = verb.slice(0, -2) + 's';
+            conjugatedVerb = verb.slice(0, -2) + 'es';
             break;
         case 'singular-3rd':
-            conjugatedVerb = verb.slice(0, -2);
+            conjugatedVerb = verb.slice(0, -2) + 'e';
             break;
         case 'plural-1st':
             conjugatedVerb = verb.slice(0, -2) + 'ons';

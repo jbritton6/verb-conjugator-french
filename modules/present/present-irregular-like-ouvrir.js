@@ -5,7 +5,7 @@
  * @param   {String} person Which person to conjugate the verb into.
  * @returns {String}        Conjugated verb.
  */
-export function conjugatePresentIrregularLikeOuvrir(verb, person) {
+export function presentIrregularLikeOuvrir(verb, person) {
     let conjugatedVerb = '';
 
     switch(person) {

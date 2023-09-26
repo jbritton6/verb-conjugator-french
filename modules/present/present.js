@@ -1,7 +1,7 @@
-import { conjugatePresentRegularEr } from './conjugate-present-regular-er.js';
-import { conjugatePresentRegularRe } from './conjugate-present-regular-re.js';
-import { conjugatePresentRegularIr } from './conjugate-present-regular-ir.js';
-import { conjugatePresentIrregularLikeOuvrir } from './conjugate-present-irregular-like-ouvrir.js';
+import { presentRegularEr } from './present-regular-er.js';
+import { presentRegularRe } from './present-regular-re.js';
+import { presentRegularIr } from './present-regular-ir.js';
+import { presentIrregularLikeOuvrir } from './present-irregular-like-ouvrir.js';
 
 
 /**
@@ -10,7 +10,7 @@ import { conjugatePresentIrregularLikeOuvrir } from './conjugate-present-irregul
  * @param   {String} person Which person to conjugate the verb into.
  * @returns {String}        Conjugated verb.
  */
-export function conjugatePresent(verb, person) {
+export function present(verb, person) {
     const REGULAR_ER = [
         'parler',
         'aimer',
@@ -33,16 +33,16 @@ export function conjugatePresent(verb, person) {
 
     switch(true) {
         case REGULAR_ER.includes(verb):
-            conjugatedVerb = conjugatePresentRegularEr(verb, person);
+            conjugatedVerb = presentRegularEr(verb, person);
             break;
         case REGULAR_RE.includes(verb):
-            conjugatedVerb = conjugatePresentRegularRe(verb, person);
+            conjugatedVerb = presentRegularRe(verb, person);
             break;
         case REGULAR_IR.includes(verb):
-            conjugatedVerb = conjugatePresentRegularIr(verb, person);
+            conjugatedVerb = presentRegularIr(verb, person);
             break;
         case IRREGULAR_LIKE_OUVRIR.includes(verb):
-            conjugatedVerb = conjugatePresentIrregularLikeOuvrir(verb, person);
+            conjugatedVerb = presentIrregularLikeOuvrir(verb, person);
     }
 
     return conjugatedVerb;
