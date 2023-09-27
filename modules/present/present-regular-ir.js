@@ -9,22 +9,22 @@ export function presentRegularIr(verb, person) {
 
     switch(person) {
         case 'singular-1st':
-            conjugatedVerb = verb.slice(0, -1) + 's';
+            conjugatedVerb = verb.slice(0, -2) + 'is';
             break;
         case 'singular-2nd':
-            conjugatedVerb = verb.slice(0, -1) + 's';
+            conjugatedVerb = verb.slice(0, -2) + 'is';
             break;
         case 'singular-3rd':
-            conjugatedVerb = verb.slice(0, -1) + 't';
+            conjugatedVerb = verb.slice(0, -2) + 'it';
             break;
         case 'plural-1st':
-            conjugatedVerb = verb.slice(0, -1) + 'issons';
+            conjugatedVerb = verb.slice(0, -2) + 'issons';
             break;
         case 'plural-2nd':
-            conjugatedVerb = verb.slice(0, -1) + 'issez';
+            conjugatedVerb = verb.slice(0, -2) + 'issez';
             break;
         case 'plural-3rd':
-            conjugatedVerb = verb.slice(0, -1) + 'issent';
+            conjugatedVerb = verb.slice(0, -2) + 'issent';
             break;
     }
 
