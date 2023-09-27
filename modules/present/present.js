@@ -1,7 +1,7 @@
-import { presentRegularEr } from './present-regular-er.js';
-import { presentRegularRe } from './present-regular-re.js';
-import { presentRegularIr } from './present-regular-ir.js';
-import { presentIrregularLikeOuvrir } from './present-irregular-like-ouvrir.js';
+import { presentRegularEr } from './groups/present-regular-er.js';
+import { presentRegularRe } from './groups/present-regular-re.js';
+import { presentRegularIr } from './groups/present-regular-ir.js';
+import { presentIrregularLikeOuvrir } from './groups/present-irregular-like-ouvrir.js';
 
 
 /**
